@@ -1,0 +1,28 @@
+.DS_Store
+Thumbs.db
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+.gradle/
+.kotlin/
+
+# Local/editor files
+.idea/
+.vscode/
+
+# Archives copied only for transport
+*.zip
+*.rar
+*.7z
+
+# Native generated artifacts
+android/app/build/
+ios/App/Pods/
+ios/App/DerivedData/
