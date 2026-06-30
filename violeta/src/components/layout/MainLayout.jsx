@@ -2,11 +2,9 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import { ModalPanicButton } from '../ModalPanicButton'
-import { useEnforceProfile } from '../../hooks/useEnforceProfile'
 
 const MainLayout = ({ modal, handleModal, setMessage, message }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  useEnforceProfile()
 
   return (
     <div className='flex h-screen overflow-hidden'>

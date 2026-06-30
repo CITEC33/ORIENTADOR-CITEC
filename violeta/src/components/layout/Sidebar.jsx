@@ -5,7 +5,6 @@ import {
   Home,
   MessageCircle,
   Send,
-  User,
   Users,
   X
 } from 'lucide-react'
@@ -20,8 +19,7 @@ const Sidebar = ({ isOpen, onClose, handleModal, setMessage }) => {
     { path: '/chat', icon: MessageCircle, label: 'Hablar con Violeta' },
     { path: '/carreras-unes', icon: GraduationCap, label: 'Carreras UNES' },
     { path: '/vida-unes', icon: Users, label: 'Vida UNES' },
-    { path: '/mi-orientacion', icon: BookOpen, label: 'Mi Orientacion' },
-    { path: '/perfil', icon: User, label: 'Perfil' }
+    { path: '/mi-orientacion', icon: BookOpen, label: 'Mi Orientacion' }
   ]
 
   return (

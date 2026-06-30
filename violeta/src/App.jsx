@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { toast, Toaster } from 'sonner'
 import MainLayout from './components/layout/MainLayout'
 import { lazy, Suspense, useEffect, useState } from 'react'
@@ -10,12 +10,9 @@ const HomePage = lazy(() => import('./pages/HomePage'))
 const ChatPage = lazy(() => import('./pages/ChatPage'))
 const ViolentometroPage = lazy(() => import('./pages/ViolentometroPage'))
 const ComunidadPage = lazy(() => import('./pages/ComunidadPage'))
-const AuthPage = lazy(() => import('./pages/Auth/AuthPage'))
-const PerfilPage = lazy(() => import('./pages/Auth/PerfilPage'))
 const MisAlertasPage = lazy(() => import('./pages/Auth/MisAlertasPage'))
 const Page404 = lazy(() => import('./pages/Page404'))
 
-import ProtectedRoute from './components/ProtectedRoute'
 import Loading from './components/Loading'
 import ScrollToTop from './components/ScrollToTop'
 
@@ -77,26 +74,17 @@ function App() {
         <ScrollToTop />
 
         <Routes>
-          <Route path='/login' element={<AuthPage />} />
-          <Route
-            path='/perfil'
-            element={
-              <ProtectedRoute>
-                <PerfilPage />
-              </ProtectedRoute>
-            }
-          />
+          <Route path='/login' element={<Navigate to='/' replace />} />
+          <Route path='/perfil' element={<Navigate to='/mi-orientacion' replace />} />
 
           <Route
             element={
-              <ProtectedRoute>
-                <MainLayout
-                  modal={modal}
-                  handleModal={handleModal}
-                  setMessage={setMessage}
-                  message={message}
-                />
-              </ProtectedRoute>
+              <MainLayout
+                modal={modal}
+                handleModal={handleModal}
+                setMessage={setMessage}
+                message={message}
+              />
             }
           >
             <Route
