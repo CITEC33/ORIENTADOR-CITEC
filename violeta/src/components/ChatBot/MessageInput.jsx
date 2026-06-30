@@ -1,4 +1,4 @@
-import { Scale, Send } from 'lucide-react'
+import { ClipboardCheck, Send } from 'lucide-react'
 import { useMessageInput } from '../../hooks/useMessageInput'
 
 export function MessageInput({
@@ -48,10 +48,16 @@ export function MessageInput({
                   : 'bg-purple-300 text-violet-950 border-purple-800 shadow-sm'
               }
             `}
-            title={isLegalMode ? 'Desactivar Modo Legal' : 'Activar Modo Legal'}
+            title={
+              isLegalMode
+                ? 'Desactivar Modo Admisiones'
+                : 'Activar Modo Admisiones'
+            }
           >
-            <Scale className='w-3.5 h-3.5' />
-            {isLegalMode ? 'Modo Legal Activo' : 'Modo Legal Desactivado'}
+            <ClipboardCheck className='w-3.5 h-3.5' />
+            {isLegalMode
+              ? 'Modo Admisiones Activo'
+              : 'Modo Admisiones Desactivado'}
           </button>
         )}
 
@@ -75,13 +81,17 @@ export function MessageInput({
                 }
               `}
               title={
-                isLegalMode ? 'Desactivar Modo Legal' : 'Activar Modo Legal'
+                isLegalMode
+                  ? 'Desactivar Modo Admisiones'
+                  : 'Activar Modo Admisiones'
               }
               aria-label={
-                isLegalMode ? 'Desactivar Modo Legal' : 'Activar Modo Legal'
+                isLegalMode
+                  ? 'Desactivar Modo Admisiones'
+                  : 'Activar Modo Admisiones'
               }
             >
-              <Scale className='w-5 h-5' />
+              <ClipboardCheck className='w-5 h-5' />
             </button>
           )}
 
@@ -94,8 +104,8 @@ export function MessageInput({
             onKeyDown={handleKeyDown}
             placeholder={
               isLegalMode
-                ? 'Escribe tu consulta legal...'
-                : 'Escribe tu mensaje...'
+                ? 'Escribe tu duda de admisiones...'
+                : 'Escribe tu duda vocacional...'
             }
             disabled={disabled}
             maxLength={2000}

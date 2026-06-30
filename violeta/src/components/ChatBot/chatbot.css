@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -17,7 +17,7 @@
   --primary-blue-dark: #2563eb;
   --primary-blue-darker: #1d4ed8;
 
-  /* Colores secundarios - Violeta (SOLO para Modo Legal) */
+  /* Colores secundarios - Violeta (Modo Admisiones) */
   --primary-violet: #8b5cf6;
   --light-violet: #a78bfa;
   --dark-violet: #7c3aed;
@@ -374,3 +374,4 @@ body::before {
     -webkit-backdrop-filter: blur(15px);
   }
 }
+

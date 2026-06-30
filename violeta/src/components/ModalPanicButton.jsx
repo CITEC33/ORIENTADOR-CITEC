@@ -1,10 +1,7 @@
-import { AlertTriangle, Phone, X } from 'lucide-react'
-import { usePanicButton } from '../hooks/usePanicButton'
+import { GraduationCap, Info, MessageCircle, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export const ModalPanicButton = ({ handleModal, message }) => {
-  const { loading } = usePanicButton()
-
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center p-4'>
       <div
@@ -16,16 +13,17 @@ export const ModalPanicButton = ({ handleModal, message }) => {
         <div className='bg-gray-800 px-6 py-4 border-b border-gray-700 flex justify-between items-center'>
           <div>
             <div className='flex items-center gap-2'>
-              <AlertTriangle className='text-red-500 w-5 h-5 animate-pulse' />
-              <h2 className='text-lg font-bold text-white'>Centro de Ayuda</h2>
+              <GraduationCap className='text-blue-400 w-5 h-5' />
+              <h2 className='text-lg font-bold text-white'>
+                Solicitud de informacion
+              </h2>
             </div>
             <Link
-              to='/mis-alertas'
+              to='/mi-orientacion'
               onClick={handleModal}
-              className='text-red-400 text-xs underline block hover:text-red-300 mt-1 font-medium'
+              className='text-blue-300 text-xs underline block hover:text-blue-200 mt-1 font-medium'
             >
-              Dale seguimiento a tu alerta. Puedes agregar una nota a tu folio
-              desde aquí.
+              Consulta tus avances, notas y solicitudes de orientacion.
             </Link>
           </div>
           <button
@@ -38,7 +36,7 @@ export const ModalPanicButton = ({ handleModal, message }) => {
 
         <div className='p-6'>
           <h3 className='text-2xl font-bold text-white text-center'>
-            ¿Qué más deseas hacer?
+            Que deseas hacer ahora?
           </h3>
           {message && (
             <p className='text-gray-400 text-center mt-2 text-sm px-4'>
@@ -47,14 +45,23 @@ export const ModalPanicButton = ({ handleModal, message }) => {
           )}
 
           <div className='flex flex-col gap-4 mt-6'>
-            <a
-              href='tel:6181378130'
-              disabled={loading}
-              className='w-full py-4 px-6 rounded-lg font-bold shadow-[0_0_15px_rgba(220,38,38,0.4)] flex items-center justify-center gap-3 transition-all bg-red-600 text-white hover:bg-red-500 active:scale-95 border border-red-500 ring-2 ring-transparent hover:ring-red-500/50 disabled:pointer-events-none disabled:bg-gray-700 disabled:shadow-none'
+            <Link
+              to='/chat'
+              onClick={handleModal}
+              className='w-full py-4 px-6 rounded-lg font-bold shadow-[0_0_15px_rgba(37,99,235,0.35)] flex items-center justify-center gap-3 transition-all bg-blue-600 text-white hover:bg-blue-500 active:scale-95 border border-blue-500 ring-2 ring-transparent hover:ring-blue-500/50'
             >
-              <Phone className='w-6 h-6 shrink-0' />
-              <span>Llama para recibir acompañamiento</span>
-            </a>
+              <MessageCircle className='w-6 h-6 shrink-0' />
+              <span>Hablar con Violeta sobre admisiones</span>
+            </Link>
+
+            <Link
+              to='/vida-unes'
+              onClick={handleModal}
+              className='w-full py-4 px-6 rounded-lg font-bold flex items-center justify-center gap-3 transition-all bg-gray-800 text-blue-100 hover:bg-gray-700 active:scale-95 border border-blue-500/30'
+            >
+              <Info className='w-6 h-6 shrink-0' />
+              <span>Ver recursos y vida UNES</span>
+            </Link>
           </div>
         </div>
       </div>

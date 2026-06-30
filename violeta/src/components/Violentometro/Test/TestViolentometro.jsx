@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion'
+﻿import { motion, AnimatePresence } from 'framer-motion'
 import { useTestViolentometro } from '../../../hooks/useTestViolentometro'
 import { useEffect } from 'react'
 import { ViolentometroResults } from './ViolentometroResults'
@@ -19,7 +19,7 @@ export const TestViolentometro = () => {
   } = useTestViolentometro()
 
   useEffect(() => {
-    document.title = 'Test Violentómetro - Fuerza Violeta'
+    document.title = 'Perfil vocacional - UNES Orienta IA'
   }, [])
 
   if (isCompleted) {
@@ -115,3 +115,4 @@ export const TestViolentometro = () => {
     </motion.div>
   )
 }
+

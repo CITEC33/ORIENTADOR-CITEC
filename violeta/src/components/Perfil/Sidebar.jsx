@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ShieldCheck, Camera, Loader2, AlertCircle, LogOut } from 'lucide-react'
+import { ShieldCheck, Camera, Loader2, BookOpen, LogOut } from 'lucide-react'
 
 export const Sidebar = ({
   formData,
@@ -60,16 +60,16 @@ export const Sidebar = ({
 
           <span className='mt-3 inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-emerald-900/30 text-emerald-400 border border-emerald-500/30 uppercase tracking-wider'>
             <ShieldCheck className='w-3 h-3' />
-            Cuenta Segura
+            Cuenta UNES
           </span>
         </div>
 
         <Link
-          to='/mis-alertas'
+          to='/mi-orientacion'
           className='w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-900/20 text-blue-400 border border-blue-500/20 font-bold hover:bg-blue-900/40 hover:border-blue-500/40 transition-colors mb-3'
         >
-          <AlertCircle className='w-5 h-5' />
-          <span className='font-medium'>Mis alertas</span>
+          <BookOpen className='w-5 h-5' />
+          <span className='font-medium'>Mi orientacion</span>
         </Link>
 
         <button
@@ -77,7 +77,7 @@ export const Sidebar = ({
           className='w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-red-900/20 text-red-400 border border-red-500/20 font-bold hover:bg-red-900/40 hover:border-red-500/40 transition-colors'
         >
           <LogOut className='w-5 h-5' />
-          <span className='font-medium'>Cerrar Sesión</span>
+          <span className='font-medium'>Cerrar sesion</span>
         </button>
       </div>
     </motion.div>

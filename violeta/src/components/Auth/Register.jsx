@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/SupabaseAuthContext'
 import { motion } from 'framer-motion'
@@ -12,12 +12,12 @@ import {
   ArrowRight,
   CheckCircle2,
   AlertCircle,
-  Phone,
+  MessageCircle,
   MapPin,
   Text
 } from 'lucide-react'
-import logo_durango from '../../assets/imgs/logo_durango.png'
-import logo from '../../assets/imgs/avatar-violeta.jpeg'
+import logo_durango from '../../assets/imgs/logo-unes.png'
+import logo from '../../assets/imgs/violeta-orienta-avatar.png'
 
 const Register = ({ onChange }) => {
   const navigate = useNavigate()
@@ -99,7 +99,7 @@ const Register = ({ onChange }) => {
             <div className='flex items-center justify-center gap-5 mb-6'>
               <img
                 src={logo_durango}
-                alt='Gobierno'
+                alt='Universidad Espana Durango'
                 className='h-16 w-auto object-contain'
               />
 
@@ -108,7 +108,7 @@ const Register = ({ onChange }) => {
               <div className='inline-flex items-center justify-center w-16 h-16 rounded-xl shadow-sm'>
                 <img
                   src={logo}
-                  alt='Fuerza Violeta Logo'
+                  alt='Violeta orientadora'
                   className='w-full h-full rounded-xl object-cover shrink-0'
                 />
               </div>
@@ -117,14 +117,14 @@ const Register = ({ onChange }) => {
             <h2 className='text-2xl font-bold text-slate-900'>Crear cuenta</h2>
             <p className='text-slate-500'>
               {' '}
-              Únete a Fuerza Violeta ingresando tus datos
+              Crea tu acceso a UNES Orienta IA
             </p>
           </div>
 
           <div className='hidden lg:block text-center mb-6'>
             <h2 className='text-2xl font-bold text-slate-900'>Crear cuenta</h2>
             <p className='text-slate-500 text-sm mt-1'>
-              Únete a Fuerza Violeta ingresando tus datos
+              Crea tu acceso a UNES Orienta IA
             </p>
           </div>
 
@@ -190,7 +190,7 @@ const Register = ({ onChange }) => {
 
             <div className='space-y-1'>
               <div className='relative group'>
-                <Phone className='absolute left-3 top-3 h-5 w-5 text-slate-400 group-focus-within:text-violet-500 transition-colors' />
+                <MessageCircle className='absolute left-3 top-3 h-5 w-5 text-slate-400 group-focus-within:text-violet-500 transition-colors' />
                 <input
                   type='tel'
                   name='phone'
@@ -226,7 +226,7 @@ const Register = ({ onChange }) => {
                 <input
                   type='email'
                   name='email'
-                  placeholder='Correo electrónico'
+                  placeholder='Correo electronico'
                   autoComplete='email'
                   required
                   value={formData.email}
@@ -290,24 +290,24 @@ const Register = ({ onChange }) => {
 
           <div className='mt-4 sm:mt-6 pt-5 border-t border-slate-100 text-center space-y-3'>
             <p className='text-sm text-slate-600'>
-              ¿Ya tienes cuenta?{' '}
+              Ya tienes cuenta?{' '}
               <button
                 onClick={() => onChange('login')}
                 className='font-bold text-violet-600 hover:text-violet-800 transition-colors'
               >
-                Inicia sesión
+                Inicia sesion
               </button>
             </p>
           </div>
         </div>
 
         <a
-          href='tel:6181378130'
-          className='mt-4 sm:mt-0 block bg-red-50/50 border-t border-red-100 p-3 text-center group hover:bg-red-50 transition-colors'
+          href='mailto:admisiones@unes.example'
+          className='mt-4 sm:mt-0 block bg-blue-50/70 border-t border-blue-100 p-3 text-center group hover:bg-blue-50 transition-colors'
         >
-          <span className='text-xs font-bold text-red-600/80 group-hover:text-red-700 flex items-center justify-center gap-2 transition-colors uppercase sm:tracking-widest'>
-            <Phone className='w-4 h-4 shrink-0' />
-            Llamar a la línea de emergencia
+          <span className='text-xs font-bold text-blue-700/80 group-hover:text-blue-800 flex items-center justify-center gap-2 transition-colors uppercase sm:tracking-widest'>
+            <MessageCircle className='w-4 h-4 shrink-0' />
+            Solicitar informacion de admisiones
           </span>
         </a>
       </div>
@@ -316,3 +316,4 @@ const Register = ({ onChange }) => {
 }
 
 export default Register
+

@@ -37,7 +37,7 @@ function App() {
             const request = await Geolocation.requestPermissions()
             if (request.location !== 'granted') {
               toast.warning(
-                'Debes de permitir el acceso a tu ubicación para poderla enviar en caso de emergencia.'
+                'Permite el acceso a tu ubicacion si deseas recibir informacion personalizada sobre campus y servicios cercanos.'
               )
             }
           }
@@ -109,8 +109,11 @@ function App() {
                 />
               }
             />
+            <Route path='/carreras-unes' element={<ViolentometroPage />} />
             <Route path='/violentometro' element={<ViolentometroPage />} />
+            <Route path='/vida-unes' element={<ComunidadPage />} />
             <Route path='/comunidad' element={<ComunidadPage />} />
+            <Route path='/mi-orientacion' element={<MisAlertasPage />} />
             <Route path='/mis-alertas' element={<MisAlertasPage />} />
             <Route path='/chat' element={<ChatPage />} />
           </Route>

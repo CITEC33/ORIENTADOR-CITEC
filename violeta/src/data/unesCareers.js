@@ -2,77 +2,81 @@ export const unesCareerAreas = [
   {
     area: 'Ciencias Empresariales',
     description:
-      'Para perfiles con interés en negocios, administración, turismo, ventas, finanzas, emprendimiento, organización y gestión de servicios.',
+      'Area para perfiles con interes en negocios, administracion, turismo, finanzas, ventas, emprendimiento y gestion de servicios.',
     careers: [
-      'Gastronomía y Gestión Turística',
-      'Administración Empresarial',
-      'Contaduría Pública',
-      'Hotelería y Turismo',
+      'Gastronomia y Gestion Turistica',
+      'Administracion Empresarial',
+      'Contaduria Publica',
+      'Hoteleria y Turismo',
       'Mercadotecnia'
     ]
   },
   {
-    area: 'Ciencias Jurídicas y Sociales',
+    area: 'Ciencias Juridicas y Sociales',
     description:
-      'Para perfiles interesados en justicia, seguridad, investigación, gobierno, relaciones internacionales, servicio público y análisis social.',
+      'Area para perfiles interesados en justicia, investigacion, gobierno, relaciones internacionales, servicio publico y analisis social.',
     careers: [
-      'Criminología, Criminalística y Técnicas Periciales',
-      'Ciencias Políticas en Relaciones Internacionales',
-      'Ciencias Políticas en Administración Pública',
+      'Criminologia, Criminalistica y Tecnicas Periciales',
+      'Ciencias Politicas en Relaciones Internacionales',
+      'Ciencias Politicas en Administracion Publica',
       'Derecho'
     ]
   },
   {
-    area: 'Educación',
+    area: 'Educacion',
     description:
-      'Para perfiles con vocación de enseñanza, acompañamiento, inclusión, idiomas, deporte, formación humana y desarrollo educativo.',
+      'Area para perfiles con vocacion de ensenanza, acompanamiento, inclusion, idiomas, deporte y desarrollo educativo.',
     careers: [
-      'Educación Bilingüe',
-      'Educación Especial',
-      'Actividad Física y Deporte'
+      'Educacion Bilingue',
+      'Educacion Especial',
+      'Actividad Fisica y Deporte'
     ]
   },
   {
-    area: 'Ciencias de la Comunicación',
+    area: 'Ciencias de la Comunicacion',
     description:
-      'Para perfiles creativos, expresivos y estratégicos, interesados en medios, imagen pública, periodismo, publicidad y comunicación institucional.',
+      'Area para perfiles creativos y estrategicos interesados en medios, imagen publica, periodismo, publicidad y comunicacion institucional.',
     careers: [
-      'Relaciones Públicas e Imagen Corporativa',
+      'Relaciones Publicas e Imagen Corporativa',
       'Periodismo',
       'Publicidad'
     ]
   },
   {
-    area: 'Diseño y Animación',
+    area: 'Diseno y Animacion',
     description:
-      'Para perfiles visuales, creativos y tecnológicos, interesados en arte digital, identidad gráfica, productos, animación y comunicación visual.',
-    careers: ['Animación y Arte digital', 'Diseño Industrial', 'Diseño Gráfico']
-  },
-  {
-    area: 'Ciencias Médicas',
-    description:
-      'Para perfiles con vocación de servicio, salud, bienestar, atención clínica, nutrición, odontología, enfermería y psicología.',
+      'Area para perfiles visuales, creativos y tecnologicos interesados en arte digital, identidad grafica, productos y comunicacion visual.',
     careers: [
-      'Nutrición y Bienestar Integral',
-      'Médico Cirujano',
-      'Prótesis dental',
-      'Médico Cirujano Odontólogo',
-      'Ciencias de la Enfermería',
-      'Psicología Clínica',
-      'Psicología Educativa'
+      'Animacion y Arte Digital',
+      'Diseno Industrial',
+      'Diseno Grafico'
     ]
   },
   {
-    area: 'Ingeniería Superior',
+    area: 'Ciencias Medicas',
     description:
-      'Para perfiles analíticos, técnicos y de solución de problemas, interesados en sistemas, arquitectura, mecánica, electricidad, automotriz y geología.',
+      'Area para perfiles con vocacion de servicio, salud, bienestar, atencion clinica, nutricion, odontologia, enfermeria y psicologia.',
+    careers: [
+      'Nutricion y Bienestar Integral',
+      'Medico Cirujano',
+      'Protesis Dental',
+      'Medico Cirujano Odontologo',
+      'Ciencias de la Enfermeria',
+      'Psicologia Clinica',
+      'Psicologia Educativa'
+    ]
+  },
+  {
+    area: 'Ingenieria Superior',
+    description:
+      'Area para perfiles analiticos, tecnicos y de solucion de problemas interesados en sistemas, arquitectura, mecanica, electricidad, automotriz y geologia.',
     careers: [
       'Arquitectura',
-      'Ingeniero en Tecnologías y Sistemas de Información',
-      'Ingeniero Mecánico Administrador',
-      'Ingeniero Mecánico Electricista',
-      'Ingeniero Mecánico en Maquinaria Automotriz',
-      'Ingeniero en Geología'
+      'Ingeniero en Tecnologias y Sistemas de Informacion',
+      'Ingeniero Mecanico Administrador',
+      'Ingeniero Mecanico Electricista',
+      'Ingeniero Mecanico en Maquinaria Automotriz',
+      'Ingeniero en Geologia'
     ]
   }
 ]

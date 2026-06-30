@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   ArrowRight,
@@ -8,12 +8,12 @@ import {
   Loader2,
   Lock,
   Mail,
-  Phone
+  MessageCircle
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useAuth } from '../../context/SupabaseAuthContext'
-import logo_durango from '../../assets/imgs/logo_durango.png'
-import logo from '../../assets/imgs/avatar-violeta.jpeg'
+import logo_durango from '../../assets/imgs/logo-unes.png'
+import logo from '../../assets/imgs/violeta-orienta-avatar.png'
 
 export const Login = ({ onChange }) => {
   const navigate = useNavigate()
@@ -41,11 +41,11 @@ export const Login = ({ onChange }) => {
     try {
       const { error } = await signIn(formData.email, formData.password)
       if (error) {
-        setError('Credenciales inválidas.')
+        setError('Credenciales invalidas.')
         setIsSubmitting(false)
       }
     } catch (err) {
-      setError('Ocurrió un error inesperado')
+      setError('Ocurrio un error inesperado')
       setIsSubmitting(false)
     }
   }
@@ -77,7 +77,7 @@ export const Login = ({ onChange }) => {
             <div className='flex items-center justify-center gap-5 mb-6'>
               <img
                 src={logo_durango}
-                alt='Gobierno'
+                alt='Universidad Espana Durango'
                 className='h-16 w-auto object-contain'
               />
 
@@ -86,7 +86,7 @@ export const Login = ({ onChange }) => {
               <div className='inline-flex items-center justify-center w-16 h-16 rounded-xl shadow-sm'>
                 <img
                   src={logo}
-                  alt='Fuerza Violeta Logo'
+                  alt='Violeta orientadora'
                   className='w-full h-full rounded-xl object-cover shrink-0'
                 />
               </div>
@@ -100,9 +100,9 @@ export const Login = ({ onChange }) => {
 
           <div className='hidden lg:block mb-8'>
             <h2 className='text-3xl font-bold text-slate-900'>
-              Iniciar sesión
+              Iniciar sesion
             </h2>
-            <p className='text-slate-500 mt-2'>Accede a Fuerza Violeta</p>
+            <p className='text-slate-500 mt-2'>Accede a UNES Orienta IA</p>
           </div>
 
           {error && (
@@ -121,7 +121,7 @@ export const Login = ({ onChange }) => {
           <form onSubmit={handleSubmit} className='space-y-6'>
             <div className='space-y-2'>
               <label className='text-sm font-semibold text-slate-700 ml-1'>
-                Correo electrónico
+                Correo electronico
               </label>
               <div className='relative group'>
                 <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
@@ -188,7 +188,7 @@ export const Login = ({ onChange }) => {
                 </div>
               ) : (
                 <div className='flex items-center gap-2'>
-                  <span>Iniciar sesión</span>
+                  <span>Iniciar sesion</span>
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                 </div>
               )}
@@ -197,27 +197,28 @@ export const Login = ({ onChange }) => {
 
           <div className='mt-8 pt-6 border-t border-slate-100 text-center space-y-4'>
             <p className='text-sm text-slate-600'>
-              ¿No tienes una cuenta activa?{' '}
+              No tienes una cuenta activa?{' '}
               <button
                 onClick={() => onChange('register')}
                 className='font-bold text-violet-600 hover:text-violet-800 transition-colors'
               >
-                Regístrate aquí
+                Registrate aqui
               </button>
             </p>
           </div>
         </div>
 
         <a
-          href='tel:6181378130'
-          className='block bg-red-50/50 border-t border-red-100 p-3 text-center group hover:bg-red-50 transition-colors'
+          href='mailto:admisiones@unes.example'
+          className='block bg-blue-50/70 border-t border-blue-100 p-3 text-center group hover:bg-blue-50 transition-colors'
         >
-          <span className='text-xs font-bold text-red-600/80 group-hover:text-red-700 flex items-center justify-center gap-2 transition-colors uppercase sm:tracking-widest'>
-            <Phone className='w-4 h-4 shrink-0' />
-            Llamar a la línea de emergencia
+          <span className='text-xs font-bold text-blue-700/80 group-hover:text-blue-800 flex items-center justify-center gap-2 transition-colors uppercase sm:tracking-widest'>
+            <MessageCircle className='w-4 h-4 shrink-0' />
+            Solicitar informacion de admisiones
           </span>
         </a>
       </div>
     </motion.div>
   )
 }
+

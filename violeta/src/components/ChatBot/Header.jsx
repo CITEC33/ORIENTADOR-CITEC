@@ -1,7 +1,7 @@
 import { memo } from 'react'
-import { Lock, Send, Trash2, AlertTriangle, Bot } from 'lucide-react'
+import { AlertTriangle, Bot, Lock, Send, Trash2 } from 'lucide-react'
 import video from '../../assets/imgs/violeta-avatar.mp4'
-import poster from '../../assets/imgs/avatar-violeta.jpeg'
+import poster from '../../assets/imgs/violeta-orienta-avatar.png'
 
 export const Header = memo(function Header({
   isConnected,
@@ -87,7 +87,7 @@ export const Header = memo(function Header({
               playsInline
               poster={poster}
               className='w-full h-full object-cover rounded-full'
-              aria-label='Fuerza Violeta avatar animado'
+              aria-label='Violeta orientadora avatar animado'
               style={{ objectPosition: 'center center' }}
             />
           </div>
@@ -96,7 +96,7 @@ export const Header = memo(function Header({
               Violeta
             </h1>
             <p className='text-xs sm:text-sm text-slate-400 leading-tight truncate max-w-[140px] sm:max-w-none'>
-              Asistente de orientación en emergencias
+              Asistente vocacional UNES
             </p>
           </div>
         </div>
@@ -118,14 +118,14 @@ export const Header = memo(function Header({
           <button
             onClick={onHistoryClick}
             className='
-              w-9 h-9 sm:w-10 sm:h-10 rounded-full 
+              w-9 h-9 sm:w-10 sm:h-10 rounded-full
               glass border border-slate-600/30
               hover:border-blue-500/60 hover:scale-110
               transition-all duration-200
               flex items-center justify-center
               relative shrink-0
             '
-            title='Historial de chats'
+            title='Historial de orientacion'
             style={{ boxShadow: '0 0 20px rgba(59, 130, 246, 0.2)' }}
           >
             <Bot className='w-4 h-4 sm:w-5 sm:h-5 text-blue-400' />

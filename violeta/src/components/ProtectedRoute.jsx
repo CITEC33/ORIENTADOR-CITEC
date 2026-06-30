@@ -1,4 +1,4 @@
-import { Navigate } from 'react-router-dom'
+﻿import { Navigate } from 'react-router-dom'
 import { useAuth } from '../context/SupabaseAuthContext'
 import { Loader2 } from 'lucide-react'
 import { NotificacionesUsuaria } from './NotificacionesUsuaria'
@@ -39,13 +39,13 @@ const ProtectedRoute = ({
         <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-red-950'>
           <div className='max-w-md text-center p-8 bg-gray-900/50 backdrop-blur-md rounded-3xl border border-red-900/50 shadow-2xl shadow-black/50'>
             <div className='w-20 h-20 bg-red-900/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-500/20 shadow-[0_0_15px_rgba(239,68,68,0.2)]'>
-              <span className='text-4xl filter drop-shadow-md'>🚫</span>
+              <span className='text-4xl filter drop-shadow-md'>!</span>
             </div>
             <h1 className='text-2xl font-bold text-white mb-2'>
               Acceso Denegado
             </h1>
             <p className='text-gray-400 mb-6 leading-relaxed'>
-              No tienes permisos suficientes para acceder a esta sección. Se
+              No tienes permisos suficientes para acceder a esta seccion. Se
               requiere uno de los siguientes roles:{' '}
               <span className='text-red-400 font-mono text-sm px-1 py-0.5 bg-red-900/30 rounded'>
                 {allowedRoles.join(', ')}
@@ -72,3 +72,4 @@ const ProtectedRoute = ({
 }
 
 export default ProtectedRoute
+

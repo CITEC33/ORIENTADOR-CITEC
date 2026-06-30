@@ -22,7 +22,7 @@ const PerfilPage = () => {
   } = usePerfil({ authLoading, user, signOut })
 
   useEffect(() => {
-    document.title = 'Perfil - Fuerza Violeta'
+    document.title = 'Perfil - UNES Orienta IA'
   }, [])
 
   if (authLoading) {

@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
-import { Shield, Heart, Phone } from 'lucide-react'
+import { BookOpen, GraduationCap, MessageCircle } from 'lucide-react'
 import { Login } from '../../components/Auth/Login'
 import { useEffect, useState } from 'react'
 import Register from '../../components/Auth/Register'
 
-import logo_durango from '../../assets/imgs/logo_durango.png'
-import logo from '../../assets/imgs/avatar-violeta.jpeg'
+import logoUnes from '../../assets/imgs/logo-unes.png'
+import avatar from '../../assets/imgs/violeta-orienta-avatar.png'
 
 const AuthPage = () => {
   const [page, setPage] = useState('login')
@@ -13,8 +13,8 @@ const AuthPage = () => {
   useEffect(() => {
     document.title =
       page === 'login'
-        ? 'Iniciar Sesión - Fuerza Violeta'
-        : 'Registrarse - Fuerza Violeta'
+        ? 'Iniciar sesion - UNES Orienta IA'
+        : 'Registrarse - UNES Orienta IA'
   }, [page])
 
   return (
@@ -41,7 +41,7 @@ const AuthPage = () => {
             ease: 'linear',
             delay: 1
           }}
-          className='absolute -bottom-[20%] -right-[10%] w-[500px] h-[500px] bg-fuchsia-600/20 rounded-full blur-[80px] will-change-transform transform-gpu'
+          className='absolute -bottom-[20%] -right-[10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[80px] will-change-transform transform-gpu'
         />
       </div>
 
@@ -54,18 +54,18 @@ const AuthPage = () => {
         >
           <div className='flex items-center gap-6'>
             <div className='flex items-center gap-4'>
-              <div className='w-24 h-16 rounded-md shadow-2xl'>
+              <div className='w-24 h-16 rounded-md shadow-2xl overflow-hidden'>
                 <img
-                  src={logo_durango}
-                  alt='Gobierno'
-                  className='w-full h-full object-contain mix-blend-screen rounded-md'
+                  src={logoUnes}
+                  alt='Universidad Espana Durango'
+                  className='w-full h-full object-cover rounded-md'
                 />
               </div>
 
-              <div className='w-16 h-16 rounded-2xl shadow-2xl'>
+              <div className='w-16 h-16 rounded-2xl shadow-2xl overflow-hidden'>
                 <img
-                  src={logo}
-                  alt='Fuerza Violeta Logo'
+                  src={avatar}
+                  alt='Violeta orientadora'
                   className='w-full h-full rounded-2xl object-cover shrink-0'
                 />
               </div>
@@ -74,53 +74,52 @@ const AuthPage = () => {
             <div className='h-20 w-px bg-gradient-to-b from-transparent via-violet-400/50 to-transparent'></div>
 
             <div>
-              <h1 className='text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-violet-200 to-violet-400 bg-clip-text text-transparent'>
-                Fuerza Violeta
+              <h1 className='text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-violet-200 to-blue-300 bg-clip-text text-transparent'>
+                UNES Orienta IA
               </h1>
               <p className='text-violet-200/80 font-medium tracking-wide'>
-                SISTEMA INTEGRAL DE APOYO
+                ORIENTACION VOCACIONAL
               </p>
             </div>
           </div>
 
           <div className='space-y-6 max-w-lg'>
             <h2 className='text-3xl font-bold leading-tight'>
-              No estás sola, tu integridad es{' '}
-              <span className='text-violet-400'>nuestra prioridad</span>.
+              Descubre tu carrera ideal en{' '}
+              <span className='text-violet-400'>Universidad Espana Durango</span>.
             </h2>
             <p className='text-lg text-slate-400 leading-relaxed'>
-              Tu enlace directo a protección policial en situaciones de riesgo,
-              acompañado de herramientas para tu bienestar, tests y salud
-              emocional.
+              Violeta te acompana para explorar carreras, comparar opciones y
+              resolver dudas de admisiones con una experiencia guiada por IA.
             </p>
           </div>
 
           <div className='grid gap-6'>
             {[
               {
-                icon: Shield,
-                title: 'Protección Policial',
-                desc: 'Alerta silenciosa monitoreada en tiempo real',
+                icon: GraduationCap,
+                title: 'Carreras UNES',
+                desc: 'Oferta academica organizada por areas profesionales',
                 color: 'text-emerald-400',
                 bg: 'bg-emerald-400/10'
               },
               {
-                icon: Phone,
-                title: 'Red de Emergencia',
-                desc: 'Enlace a la línea de emergencia y ubicación vía WhatsApp',
-                color: 'text-rose-400',
-                bg: 'bg-rose-400/10'
+                icon: MessageCircle,
+                title: 'Violeta orientadora',
+                desc: 'Chat para comparar carreras y aclarar dudas',
+                color: 'text-blue-400',
+                bg: 'bg-blue-400/10'
               },
               {
-                icon: Heart,
-                title: 'Bienestar Integral',
-                desc: 'Violentómetro, guías y recursos de apoyo',
+                icon: BookOpen,
+                title: 'Proyecto de vida',
+                desc: 'Recursos para elegir con mayor claridad',
                 color: 'text-violet-400',
                 bg: 'bg-violet-400/10'
               }
             ].map((item, index) => (
               <motion.div
-                key={index}
+                key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 + index * 0.1 }}

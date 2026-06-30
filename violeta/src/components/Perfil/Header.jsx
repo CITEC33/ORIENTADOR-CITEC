@@ -12,19 +12,11 @@ export const Header = ({ isProfileComplete }) => {
             </div>
             <div className='ml-3'>
               <p className='text-sm text-amber-400 font-bold'>
-                Acción Requerida
+                Completa tu perfil
               </p>
               <p className='text-sm text-amber-200/80 mt-1'>
-                Para usar la plataforma, debes completar tu{' '}
-                <strong className='text-amber-200'>apellido paterno</strong>,{' '}
-                <strong className='text-amber-200'>apellido materno</strong>,{' '}
-                <strong className='text-amber-200'>teléfono</strong>,{' '}
-                <strong className='text-amber-200'>dirección</strong> y agregar
-                al menos{' '}
-                <strong className='text-amber-200'>
-                  un contacto de emergencia
-                </strong>
-                .
+                Agrega tus datos principales para que Violeta pueda orientar
+                mejor tus dudas sobre carreras, admisiones y vida universitaria.
               </p>
             </div>
           </div>
@@ -35,14 +27,14 @@ export const Header = ({ isProfileComplete }) => {
           className='inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors'
         >
           <ArrowLeft className='w-5 h-5' />
-          <span>Volver al Inicio</span>
+          <span>Volver al inicio</span>
         </Link>
       )}
 
       <div>
         <h1 className='text-3xl font-bold text-white'>Mi Perfil</h1>
         <p className='text-gray-400 mt-2'>
-          Administra tu información personal y contactos seguros.
+          Administra tu informacion personal y preferencias de orientacion.
         </p>
       </div>
     </div>

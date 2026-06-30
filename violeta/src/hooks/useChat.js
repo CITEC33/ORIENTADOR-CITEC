@@ -183,7 +183,7 @@ export function useChat(options) {
             updatedMessages.push({
               role: 'assistant',
               content:
-                'He alcanzado mi límite de orientación en este chat, pero recuerda que no estás sola. Si tienes una emergencia, llama a la Dirección Municipal de Seguridad Publica al 618 284 4879 o comunícate a la UNIPAV al 618 132 4604. Estaré aquí para ti mañana.',
+                'He alcanzado mi limite de orientacion en este chat. Puedes volver manana para seguir explorando carreras UNES, admisiones y tu proyecto de vida universitaria.',
               timestamp: Date.now() + 1000
             })
           }

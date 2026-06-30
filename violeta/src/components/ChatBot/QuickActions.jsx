@@ -23,8 +23,8 @@ const quickActions = [
   {
     id: 'opcion4',
     icon: <MessageCircle />,
-    label: 'Información de admisiones',
-    message: 'Quiero información de admisiones'
+    label: 'Informacion de admisiones',
+    message: 'Quiero informacion de admisiones'
   }
 ]
 

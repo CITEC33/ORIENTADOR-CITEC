@@ -17,7 +17,7 @@ import LegalModeModal from '../components/ChatBot/LegalModeModal'
 import { useAuth } from '../context/SupabaseAuthContext'
 import { supabase } from '../lib/customSupabaseClient'
 import video from '../assets/imgs/violeta-avatar.mp4'
-import poster from '../assets/imgs/avatar-violeta.jpeg'
+import poster from '../assets/imgs/violeta-orienta-avatar.png'
 import '../components/ChatBot/chatbot.css'
 
 const darkSwal = Swal.mixin({
@@ -157,12 +157,12 @@ export default function ChatPage() {
   const handleClearChat = () => {
     darkSwal
       .fire({
-        title: '¿Estás segura de que deseas limpiar el chat actual?',
-        text: 'Esta acción no se puede deshacer y se perderá todo el historial de esta conversación.',
+        title: 'Deseas limpiar el chat actual?',
+        text: 'Esta accion no se puede deshacer y se perdera el historial de esta conversacion.',
         icon: 'warning',
         iconColor: '#ef4444',
         showCancelButton: true,
-        confirmButtonText: 'Sí, limpiar chat',
+        confirmButtonText: 'Si, limpiar chat',
         cancelButtonText: 'Cancelar',
         reverseButtons: true
       })
@@ -184,7 +184,7 @@ export default function ChatPage() {
   }
 
   useEffect(() => {
-    document.title = '💜 Fuerza Violeta - Asistente de Orientación 💜'
+    document.title = 'UNES Orienta IA - Violeta'
   }, [])
 
   return (
@@ -231,18 +231,19 @@ export default function ChatPage() {
                     playsInline
                     poster={poster}
                     className='w-full h-full object-cover rounded-full will-change-transform'
-                    aria-label='Violeta avatar animado'
+                    aria-label='Violeta orientadora avatar animado'
                     style={{ objectPosition: 'center center' }}
                   />
                 </div>
                 <h2 className='text-lg sm:text-xl font-bold text-white mb-1'>
-                  🌺 Hola, soy Violeta 💜
+                  Hola, soy Violeta
                 </h2>
                 <p className='text-gray-200 mb-1 text-xs sm:text-sm'>
-                  Gracias por escribirme, 🌸
+                  Estoy aqui para ayudarte a elegir una carrera, conocer la
+                  oferta de UNES Durango o resolver dudas de admisiones.
                 </p>
                 <p className='text-gray-300 mb-2 sm:mb-3 text-xs sm:text-sm font-medium'>
-                  Estoy aquí para orientarte. Elige una opción 👇
+                  Elige una opcion para iniciar tu orientacion vocacional.
                 </p>
                 <p className='text-[10px] sm:text-xs text-gray-400 mb-4 sm:mb-6'>
                   Tienes {slotRemainingMessages} mensajes disponibles hoy
@@ -291,8 +292,8 @@ export default function ChatPage() {
             />
 
             <p className='text-[9px] sm:text-[10px] text-slate-400 text-center px-4 mt-2'>
-              Tus conversaciones serán almacenadas 24h y después eliminadas por
-              tu privacidad
+              Tus conversaciones se almacenan temporalmente para mantener el
+              contexto de tu orientacion vocacional.
             </p>
           </div>
         </div>
