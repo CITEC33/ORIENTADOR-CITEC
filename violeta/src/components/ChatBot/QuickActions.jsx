@@ -1,36 +1,30 @@
 import React from 'react'
-import {
-  ArrowRight,
-  HeartHandshakeIcon,
-  HeartPulse,
-  Scale,
-  Skull
-} from 'lucide-react'
+import { ArrowRight, BookOpen, Brain, GraduationCap, MessageCircle } from 'lucide-react'
 
 const quickActions = [
   {
     id: 'opcion1',
-    icon: <HeartPulse />,
-    label: 'Orientación en situaciones de confusión emocional',
-    message: 'Necesito orientación en situaciones de confusión emocional'
+    icon: <Brain />,
+    label: 'Descubrir mi perfil vocacional',
+    message: 'Quiero descubrir mi perfil vocacional'
   },
   {
     id: 'opcion2',
-    icon: <Skull />,
-    label: 'Evaluar tu situación (semáforo de riesgo)',
-    message: 'Quiero evaluar mi situación con el semáforo de riesgo'
+    icon: <GraduationCap />,
+    label: 'Conocer carreras de UNES',
+    message: 'Quiero conocer las carreras de UNES'
   },
   {
     id: 'opcion3',
-    icon: <Scale />,
-    label: 'Orientación legal y procedimientos',
-    message: 'Necesito orientación legal y sobre procedimientos'
+    icon: <BookOpen />,
+    label: 'Comparar carreras',
+    message: 'Quiero comparar carreras de UNES'
   },
   {
     id: 'opcion4',
-    icon: <HeartHandshakeIcon />,
-    label: 'Canalización a ayuda 24/7 en Durango',
-    message: 'Necesito contactos de ayuda 24/7 en Durango'
+    icon: <MessageCircle />,
+    label: 'Información de admisiones',
+    message: 'Quiero información de admisiones'
   }
 ]
 
@@ -53,9 +47,7 @@ export function QuickActions({ onAction, disabled = false }) {
             disabled:opacity-50 disabled:cursor-not-allowed
             group
           '
-          style={{
-            boxShadow: '0 0 25px rgba(59, 130, 246, 0.2)'
-          }}
+          style={{ boxShadow: '0 0 25px rgba(59, 130, 246, 0.2)' }}
         >
           <div
             className='w-8 h-8 md:w-10 md:h-10 rounded-lg sm:rounded-xl flex items-center justify-center text-base sm:text-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300'
