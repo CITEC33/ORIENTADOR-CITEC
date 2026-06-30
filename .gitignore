@@ -10,6 +10,8 @@ Thumbs.db
 node_modules/
 dist/
 build/
+.npm-cache/
+.npm-cache-*/
 .gradle/
 .kotlin/
 

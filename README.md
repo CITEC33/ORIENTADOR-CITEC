@@ -1,6 +1,6 @@
-# VIOLETA
+# ORIENTADOR-UNES
 
-Respaldo del proyecto VIOLETA preparado el 2026-06-11.
+Base migrada desde el proyecto VIOLETA para iniciar el desarrollo de ORIENTADOR-UNES.
 
 ## Contenido
 
@@ -8,8 +8,8 @@ Respaldo del proyecto VIOLETA preparado el 2026-06-11.
 - `violeta-panel-admin/`: panel administrativo.
 - `releases/app-debug.apk`: APK debug recibido junto con el respaldo.
 
-## Notas de respaldo
+## Notas de migracion
 
-- Se extrajeron los ZIP originales en carpetas separadas para evitar subir archivos comprimidos grandes a GitHub.
+- El repositorio conserva la estructura original de VIOLETA como punto de partida.
 - No se versionan `node_modules`, caches de Gradle, builds generados ni archivos `.env`.
-- Los archivos originales usados como fuente fueron `violeta (1).zip`, `violeta-panel-admin.zip` y `app-debug.apk`.
+- En esta copia no se encontro backend Laravel (`backend/`, `composer.json` o `artisan`).
