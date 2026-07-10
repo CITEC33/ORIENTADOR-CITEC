@@ -5,6 +5,8 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+!ORIENTADOR UNES/.env.production
+.ssh-hostinger-*
 
 # Dependencies and generated output
 node_modules/
