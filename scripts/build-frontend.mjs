@@ -9,6 +9,7 @@ const frontendDist = join(frontendDir, 'dist')
 const rootDist = join(rootDir, 'dist')
 const deployDir = join(rootDir, 'deploy-hostinger')
 const apiBridge = join(rootDir, 'api')
+const hostingerPublicRoot = '/home/u215694980/domains/orientador.xn--sistemaespaa-khb.com/public_html'
 
 execSync('npm install', { cwd: frontendDir, stdio: 'inherit', shell: true })
 execSync('npm run build', { cwd: frontendDir, stdio: 'inherit', shell: true })
@@ -23,3 +24,12 @@ rmSync(apiBridge, { recursive: true, force: true })
 cpSync(join(deployDir, 'api'), apiBridge, { recursive: true })
 cpSync(join(deployDir, 'root.htaccess'), join(rootDir, '.htaccess'))
 console.log(`Build listo en ${rootDist}`)
+
+if (process.platform !== 'win32' && rootDir === hostingerPublicRoot) {
+  console.log('Hostinger detectado: preparando runtime Laravel...')
+  execSync('bash deploy-hostinger/setup-backend-runtime.sh', {
+    cwd: rootDir,
+    stdio: 'inherit',
+    shell: true
+  })
+}
