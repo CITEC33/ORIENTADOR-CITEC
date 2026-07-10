@@ -4,6 +4,12 @@ set -euo pipefail
 ROOT="$HOME/domains/orientador.xn--sistemaespaa-khb.com/public_html"
 BACKEND="$ROOT/ORIENTADOR UNES BACKEND"
 
+mkdir -p "$ROOT/api"
+cp "$ROOT/deploy-hostinger/api/index.php" "$ROOT/api/index.php"
+cp "$ROOT/deploy-hostinger/api/.htaccess" "$ROOT/api/.htaccess"
+cp "$ROOT/deploy-hostinger/root.htaccess" "$ROOT/.htaccess"
+chmod 644 "$ROOT/api/index.php" "$ROOT/api/.htaccess" "$ROOT/.htaccess"
+
 cd "$BACKEND"
 
 rm -f bootstrap/cache/packages.php bootstrap/cache/services.php bootstrap/cache/config.php bootstrap/cache/routes-*.php
@@ -37,7 +43,7 @@ else
   composer dump-autoload --no-scripts --optimize
 fi
 
-mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs bootstrap/cache database
+mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs bootstrap/cache database
 touch database/database.sqlite
 chmod -R 775 storage bootstrap/cache database
 
