@@ -1,0 +1,24 @@
+{
+  "name": "UNES Orienta IA",
+  "short_name": "Aquila UNES",
+  "description": "Orientación vocacional con Aquila, mascota oficial de Universidad España (UNES) Durango.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#1E3A8A",
+  "background_color": "#0B1D3A",
+  "display": "standalone",
+  "start_url": "/",
+  "lang": "es-MX"
+}

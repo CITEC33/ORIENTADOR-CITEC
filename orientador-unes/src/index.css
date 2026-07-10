@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 275 45% 48%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 265 20% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 265 80% 50%;
+
+    --radius: 0.5rem;
+
+    --sat: env(safe-area-inset-top);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+    --sar: env(safe-area-inset-right);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 265 80% 60%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    /* background-color: #111827; */
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-foreground antialiased;
+    background: radial-gradient(ellipse at top, #1e3a8a 0%, #0a1f4d 45%, #061539 100%);
+    background-attachment: fixed;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+
+    /* CELULARES */
+    padding-top: var(--sat);
+    padding-bottom: var(--sab);
+    padding-left: var(--sal);
+    padding-right: var(--sar);
+
+    min-height: 100dvh;
+    /* width: 100vw; */
+    box-sizing: border-box;
+    /* overscroll-behavior-y: none; */
+    scroll-behavior: smooth;
+  }
+
+  #root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@layer components {
+  .card-std {
+    @apply bg-white rounded-lg border border-gray-100 shadow-sm transition-shadow hover:shadow-md;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 rounded-md font-medium transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-primary;
+  }
+
+  /* Fondo institucional UNES (azul profundo con halo) */
+  .unes-bg {
+    background:
+      radial-gradient(ellipse at 80% -10%, rgba(56, 130, 246, 0.35) 0%, transparent 55%),
+      radial-gradient(ellipse at 0% 90%, rgba(30, 64, 175, 0.45) 0%, transparent 50%),
+      linear-gradient(160deg, #0a1f4d 0%, #0b2566 45%, #061539 100%);
+    background-attachment: fixed;
+  }
+
+  /* Tarjeta principal del Home estilo "Aquila" */
+  .quila-card {
+    @apply relative w-full rounded-2xl px-5 py-4 flex items-center gap-4 text-left text-white transition-all overflow-hidden;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.65) 0%, rgba(29, 78, 216, 0.92) 100%);
+    border: 1px solid rgba(147, 197, 253, 0.28);
+    box-shadow:
+      0 12px 32px rgba(2, 13, 51, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .quila-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.06) 50%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+  .quila-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(147, 197, 253, 0.6);
+    box-shadow:
+      0 18px 44px rgba(2, 13, 51, 0.6),
+      0 0 30px rgba(59, 130, 246, 0.38),
+      inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  }
+
+  /* Variante con tono más profundo */
+  .quila-card.quila-card--soft {
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.75) 0%, rgba(17, 41, 122, 0.95) 100%);
+  }
+
+  .quila-card .quila-icon {
+    @apply flex items-center justify-center shrink-0 rounded-full;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(145deg, #3b82f6 0%, #1d4ed8 100%);
+    box-shadow:
+      0 8px 20px rgba(59, 130, 246, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(147, 197, 253, 0.35);
+  }
+
+  /* Shimmer en bordes al hacer hover */
+  .quila-card::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      transparent 30%,
+      rgba(147, 197, 253, 0.5) 50%,
+      transparent 70%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .quila-card:hover::after {
+    opacity: 1;
+  }
+
+  /* Pulso sutil para el ícono de campana */
+  @keyframes quila-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+  .quila-pulse {
+    animation: quila-pulse 2.5s ease-in-out infinite;
+  }
+
+  /* Float suave para mascota */
+  @keyframes quila-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .quila-float {
+    animation: quila-float 4s ease-in-out infinite;
+  }
+
+  /* Respeto a usuarios con preferencia de movimiento reducido */
+  @media (prefers-reduced-motion: reduce) {
+    .quila-float,
+    .quila-pulse {
+      animation: none !important;
+    }
+    .quila-card::after {
+      transition: none !important;
+    }
+  }
+
+  /* Focus visible accesible para enlaces y botones */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 2px;
+    border-radius: 12px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(8, 26, 76, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6, #1d4ed8);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #60a5fa, #2563eb);
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 2px;
+}
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid rgba(147, 197, 253, 0.4);
+  border-right-color: #3b82f6;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}

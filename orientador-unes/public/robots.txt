@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /chat
+Disallow: /sos
+Disallow: /api
+Disallow: /admin
+
+Disallow: /*?*
+
+# Sitemap
+Sitemap: https://orientador-unes.mx/sitemap.xml
