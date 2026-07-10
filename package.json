@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "npm --prefix \"ORIENTADOR UNES\" run dev",
     "build": "node scripts/build-frontend.mjs",
+    "commit:both": "node scripts/commit-both.mjs",
     "preview": "npm --prefix \"ORIENTADOR UNES\" run preview -- --host 0.0.0.0",
     "start": "npm --prefix \"ORIENTADOR UNES\" run preview -- --host 0.0.0.0"
   },

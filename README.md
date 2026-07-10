@@ -17,6 +17,16 @@ npm run build
 
 El comando compila `ORIENTADOR UNES/` y deja el resultado en `dist/` para plataformas que importan desde la raiz del repo.
 
+## Commit a ambos repos
+
+Para guardar y subir cambios a Cacos y CITEC al mismo tiempo:
+
+```bash
+npm run commit:both -- "Mensaje del commit"
+```
+
+El comando hace `git add -A`, crea el commit en `main` si hay cambios y empuja a `origin` (`Cacosbit99/ORIENTADOR-UNES`) y `citec` (`CITEC33/ORIENTADOR-CITEC`).
+
 ## Notas
 
 - El flujo principal conserva las funciones de orientacion vocacional: inicio, chat, carreras UNES, vida UNES y mi orientacion.
