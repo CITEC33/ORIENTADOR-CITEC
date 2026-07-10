@@ -1,14 +1,26 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="$HOME/domains/orientador.xn--sistemaespaa-khb.com/public_html"
-BACKEND="$ROOT/ORIENTADOR UNES BACKEND"
+DOMAIN_ROOT="$HOME/domains/orientador.xn--sistemaespaa-khb.com"
+ROOT="$DOMAIN_ROOT/public_html"
+SOURCE_BACKEND="$ROOT/ORIENTADOR UNES BACKEND"
+BACKEND="$DOMAIN_ROOT/backend_runtime"
 
 mkdir -p "$ROOT/api"
 cp "$ROOT/deploy-hostinger/api/index.php" "$ROOT/api/index.php"
 cp "$ROOT/deploy-hostinger/api/.htaccess" "$ROOT/api/.htaccess"
 cp "$ROOT/deploy-hostinger/root.htaccess" "$ROOT/.htaccess"
 chmod 644 "$ROOT/api/index.php" "$ROOT/api/.htaccess" "$ROOT/.htaccess"
+
+mkdir -p "$BACKEND"
+cd "$SOURCE_BACKEND"
+tar \
+  --exclude='./.env' \
+  --exclude='./vendor' \
+  --exclude='./storage' \
+  --exclude='./bootstrap/cache' \
+  --exclude='./database/database.sqlite' \
+  -cf - . | (cd "$BACKEND" && tar -xf -)
 
 cd "$BACKEND"
 
@@ -37,11 +49,7 @@ SESSION_SECURE_COOKIE=true
 ENV
 fi
 
-if [ ! -d vendor ]; then
-  composer install --no-dev --no-interaction --no-scripts --optimize-autoloader
-else
-  composer dump-autoload --no-scripts --optimize
-fi
+composer install --no-dev --no-interaction --no-scripts --optimize-autoloader
 
 mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs bootstrap/cache database
 touch database/database.sqlite
