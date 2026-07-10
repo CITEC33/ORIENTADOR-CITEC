@@ -12,7 +12,7 @@ Provee autenticación sin contraseña, panel admin del bot y proxy a la API de I
 ## Instalación
 
 ```bash
-cd unes-orienta-backend
+cd "ORIENTADOR UNES BACKEND"
 composer install
 cp .env.example .env
 php artisan key:generate
@@ -77,7 +77,7 @@ La API key del bot **nunca** se expone al frontend.
 ## Estructura
 
 ```
-unes-orienta-backend/
+ORIENTADOR UNES BACKEND/
 ├── app/
 │   ├── Http/
 │   │   ├── Controllers/    AuthController, AdminController, ChatController

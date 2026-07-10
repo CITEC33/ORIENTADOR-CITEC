@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 /**
  * Semilla masiva de la base de conocimiento (RAG) desde los datos oficiales
- * de UNES Durango ya scrapeados en orientador-unes/src/data/*.js.
+ * de UNES Durango ya scrapeados en ORIENTADOR UNES/src/data/*.js.
  *
  * Genera ~50 documentos Markdown y llama a RagIndexer::reindex() para chunk + embed.
  *

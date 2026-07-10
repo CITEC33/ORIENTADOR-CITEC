@@ -1,0 +1,14 @@
+{
+  "name": "orientador-unes-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix \"ORIENTADOR UNES\" run dev",
+    "build": "node scripts/build-frontend.mjs",
+    "preview": "npm --prefix \"ORIENTADOR UNES\" run preview -- --host 0.0.0.0",
+    "start": "npm --prefix \"ORIENTADOR UNES\" run preview -- --host 0.0.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

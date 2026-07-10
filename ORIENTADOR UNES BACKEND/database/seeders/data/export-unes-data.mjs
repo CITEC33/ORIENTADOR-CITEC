@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const orientadorData = resolve(__dirname, '../../../../orientador-unes/src/data')
+const orientadorData = resolve(__dirname, '../../../../ORIENTADOR UNES/src/data')
 
 const careers = await import(`${orientadorData}/unesCareers.js`)
 const plans = await import(`${orientadorData}/careerPlans.js`)

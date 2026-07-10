@@ -4,8 +4,18 @@ Aplicacion de orientacion vocacional para Universidad Espana Durango.
 
 ## Contenido
 
-- `orientador-unes/`: aplicacion principal web/mobile con React, Vite y Capacitor.
-- `unes-orienta-backend/`: backend Laravel con API, autenticacion, panel admin, RAG y configuracion del bot.
+- `ORIENTADOR UNES/`: aplicacion principal web/mobile con React, Vite y Capacitor.
+- `ORIENTADOR UNES BACKEND/`: backend Laravel con API, autenticacion, panel admin, RAG y configuracion del bot.
+
+## Deploy frontend
+
+Desde la raiz del repositorio:
+
+```bash
+npm run build
+```
+
+El comando compila `ORIENTADOR UNES/` y deja el resultado en `dist/` para plataformas que importan desde la raiz del repo.
 
 ## Notas
 
