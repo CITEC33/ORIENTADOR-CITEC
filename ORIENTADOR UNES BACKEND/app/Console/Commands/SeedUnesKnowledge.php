@@ -551,7 +551,7 @@ MD;
         $lines[] = '## Modalidades';
         $lines[] = 'Las maestrías UNES se cursan generalmente en modalidad **sabatino ejecutivo** o **virtual**, ideal para profesionistas que ya trabajan.';
         $lines[] = '';
-        $lines[] = 'Para conocer plan de estudios, costos vigentes y fechas de inicio, contáctanos al **618 833 9000** o **informes@unes.edu.mx**.';
+        $lines[] = 'Para conocer plan de estudios, costos vigentes y fechas de inicio, contacta a promoción por **WhatsApp 6181709766** o escribe a **difusion@unes.edu.mx**.';
 
         return [
             'title'    => "Maestrías UNES en {$group['area']}",
@@ -576,7 +576,7 @@ MD;
         $lines[] = '## Modalidad';
         $lines[] = 'Los doctorados UNES se cursan en modalidad **sabatino ejecutivo** o **virtual**, con un enfoque de investigación aplicada.';
         $lines[] = '';
-        $lines[] = 'Consulta plan de estudios, líneas de investigación y costos al **618 833 9000** o **informes@unes.edu.mx**.';
+        $lines[] = 'Consulta plan de estudios, líneas de investigación y costos con promoción por **WhatsApp 6181709766** o en **difusion@unes.edu.mx**.';
 
         return [
             'title'    => 'Doctorados UNES Durango',

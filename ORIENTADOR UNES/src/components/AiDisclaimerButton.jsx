@@ -172,7 +172,7 @@ const AiDisclaimerButton = ({ variant = 'home', className = '' }) => {
                         💬 WhatsApp <strong>618 170 9766</strong>
                       </li>
                       <li>
-                        ✉️ <strong>informes@unes.edu.mx</strong>
+                        ✉️ <strong>difusion@unes.edu.mx</strong>
                       </li>
                       <li>
                         🌐{' '}

@@ -77,7 +77,7 @@ class RagRetriever
         }
 
         return "Contexto oficial de UNES Durango (usa SOLO esta información para responder cuando aplique;"
-            . " si la respuesta no está aquí, dilo con honestidad y sugiere pedir informes en unes.edu.mx):\n\n"
+            . " si la respuesta no está aquí, dilo con honestidad y sugiere contactar a promoción por WhatsApp 6181709766 o difusion@unes.edu.mx):\n\n"
             . implode("\n\n---\n\n", $parts);
     }
 }
