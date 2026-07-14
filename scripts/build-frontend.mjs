@@ -19,7 +19,11 @@ if (!existsSync(frontendDist)) {
   throw new Error(`No se encontro el build del frontend en ${frontendDist}`)
 }
 
-rmSync(rootDist, { recursive: true, force: true })
+const isHostinger = process.platform !== 'win32' && rootDir === hostingerPublicRoot
+
+if (!isHostinger) {
+  rmSync(rootDist, { recursive: true, force: true })
+}
 cpSync(frontendDist, rootDist, { recursive: true })
 const indexHtml = readFileSync(join(rootDist, 'index.html'), 'utf8')
 const mainBundle = indexHtml.match(/\/assets\/(index-[a-f0-9]+\.js)/)?.[1]
@@ -33,7 +37,7 @@ cpSync(join(deployDir, 'api'), apiBridge, { recursive: true })
 cpSync(join(deployDir, 'root.htaccess'), join(rootDir, '.htaccess'))
 console.log(`Build listo en ${rootDist}`)
 
-if (process.platform !== 'win32' && rootDir === hostingerPublicRoot) {
+if (isHostinger) {
   console.log('Hostinger detectado: preparando runtime Laravel...')
   execSync('bash deploy-hostinger/setup-backend-runtime.sh', {
     cwd: rootDir,
